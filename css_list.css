@@ -1,0 +1,15 @@
+p { margin-top: 35px;}
+h2 { color: orange; text-align: center; }
+big { color: sienna; }
+button {
+          padding: 6px 11px;
+          border: 3px solid #ffb66e;
+          font-size: 15px;
+          font-weight: bold;
+          background-color: orange;
+          color: #efefef;
+        }
+
+#message {
+        color: green;
+        }

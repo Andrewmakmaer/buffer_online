@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+     	<style>
+        	@import url(css_list.css)
+     	</style>
+	</head>
+
+    <body>
+    	<div class="section">
+		<h2>Здравствуйте! Вы на тестовой странице</h2>
+    	<p>
+            Доброго времени суток! Эта страница сделана Андреем Митичевым.
+            Она была создана для того чтобы хранить её на сервере поднятым в AWS.
+            Более того, во время создания этой страницы я хотел настроить CI/CD с помощью cистемы контроля версий <b>Git</b>  (а конкретнее GitHub) и программы <b>Jenkins</b>. Я планировал тестировать автоматически эту страницу и доставлять её на сервер в случае успешной сборки. Если вы читаете это, значит у меня всё получилось!<br> <br>
+	    <b>Желаемое предложение:</b> DevOps engineer или системный администратор Linux.
+        </p>
+
+        <hr>
+
+        <big><strong>Связь со мной:</strong></big> <br>
+        <b>Почта:</b> <a href="mailto:andrewmakmaer@gmail.com">andrewmakmaer@gmail.com</a> <br>
+        <b>Телефон:</b> <i id="phone_number"></i>
+        </div>
+
+
+        <p>Оставьте здесь текст который хотите сохранить:<br>
+            <textarea name="comment" cols="100" rows="9" id="text_area"></textarea></p>
+            <button type="submit" class="push_text">Отправить</button>
+        <div class="out_key"></div>
+
+        <br>
+
+        <p>Введите ваш ключ:<br>
+            <input name="key" id="key_area"></p>
+        <button type="submit" class="push_key">Отправить</button>
+        <br><br>
+
+
+        <p>Здесь появится тот текст, который вы сохранили<br>
+        <textarea name="result_text" cols="100" rows="9" id="out_text_form"></textarea></p>
+        <button id="copyText">Скопировать текст</button>
+        <nobr id="message"></nobr>
+
+    <script src="script.js"></script>
+     </body>
+</html>
