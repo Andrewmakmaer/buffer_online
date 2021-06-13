@@ -38,6 +38,7 @@ def test_bad_post():
         headers={"X-Token": "coneofsilence"},
         json={"id": "something", "text": "Foo Bar", "key": 0},
     )
+    print(response.status_code)
     assert response.status_code == 400
 
 
