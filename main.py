@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 import sqlite3 as sq
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -52,6 +52,9 @@ with sq.connect("key_value_base.db") as con:
                 return 'Key not found'
             else:
                 return result
+
+        else:
+            raise HTTPException(status_code=400, detail="Bad action id")
 
 
     def get_key_all():
