@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 import sqlite3 as sq
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+from fastapi.responses import FileResponse
 
 
 class Item(BaseModel):
@@ -32,6 +33,17 @@ with sq.connect("key_value_base.db") as con:
         allow_headers=["*"],
     )
 
+    @app.get("/home", response_class=FileResponse)
+    async def prez():
+        return "index.html"
+
+    @app.get("/css_list.css", response_class=FileResponse)
+    async def prez():
+        return "css_list.css"
+
+    @app.get("/script.js", response_class=FileResponse)
+    async def prez():
+        return "script.js"
 
     @app.post("/app")
     async def comment(item: Item):
