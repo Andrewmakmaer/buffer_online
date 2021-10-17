@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', ()=>{
-    var phone_number = document.getElementById('phone_number');
-    phone_number.innerHTML = '+7(901)906-98-26';
+    var phone_numbers = document.getElementById('phone_number');
+    phone_numbers.innerHTML = '+7(901)906-98-26';
 
     const url = 'http://localhost:8000/app';
     var data;

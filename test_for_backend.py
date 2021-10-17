@@ -55,3 +55,7 @@ def test_adverb_bad_post():
 
 
 test_adverb_bad_post()
+
+def test_get():
+    response = client.get("/home")
+    assert response.status_code == 200
